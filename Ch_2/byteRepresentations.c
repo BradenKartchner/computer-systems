@@ -6,6 +6,8 @@ typedef unsigned char *byte_pointer;
 void show_bytes(byte_pointer start, size_t len) {
     int i;
     for (i = 0; i < len; i++) {
+        // print in hexadecimal with at least 2 digits
+        // array addressing an unsigned char? this seems evil...
         printf(" %.2x", start[i]);
     }
     printf("\n");
