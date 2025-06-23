@@ -18,6 +18,16 @@ void show_int(int x) {
     show_bytes((byte_pointer) &x, sizeof(int));
 }
 
+void show_float(float x) {
+    show_bytes((byte_pointer) &x, sizeof(float));
+}
+
+void show_ptr(void* x) {
+    // why not use int* here?
+    // I guess just to keep this function working with any pointer?
+    show_bytes((byte_pointer) &x, sizeof(void *));
+}
+
 int main() {
 
     int testInt = 12345;
@@ -25,6 +35,7 @@ int main() {
     int *pointVal = &testInt;
 
     show_int(testInt);
+    show_float(testFloat);
 
     return 0;
 }
