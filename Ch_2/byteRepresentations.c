@@ -36,6 +36,7 @@ int main() {
 
     show_int(testInt);
     show_float(testFloat);
+    show_ptr(pointVal);
 
     return 0;
 }
