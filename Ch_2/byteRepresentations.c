@@ -30,7 +30,7 @@ void show_ptr(void* x) {
 
 int main() {
 
-    int testInt = 12345;
+    int testInt = 12345; // 0x00003039
     float testFloat = 3.14159;
     int *pointVal = &testInt;
 
