@@ -42,3 +42,39 @@ b. 0x503c - 0x40
 
 Zoom in on carry step:
 0x13c - 0x40 = 0xfc
+
+### Problem 2.5 (pg 48)
+
+int val = 0x87654321
+a. byte 1. Little endian: 21, big endian: 87
+b. byte 2. little endian: 43, big endian: 65
+c. byte 3. little endian: 65, big endian: 43
+* note: while technically correct, I forgot a nuance about the program itself
+
+### Problem 2.6 (pg 49)
+
+int: 3510593
+hex: 0x00359141
+float: 3510593.0
+hex: 0x4a564504
+
+a.
+Binary of the int:
+0000 0000 0011 0101 1001 0001 0100 0001
+0100 1010 0101 0110 0100 0101 0000 0100
+(above) Binary of the float
+how are floats encoded?
+
+b. shift the binary until a maximum amount of bits match
+0011 0101 1001 0001 0100 0001 0000 0000 (shifted 8 right)
+0100 1010 0101 0110 0100 0101 0000 0100 (not shifted)
+this probably isn't right, would be easier to write program to match bits
+take 2:
+0000 0000 0011 0101 1001 0001 0100 0001 (not shifted)
+1010 0101 0110 0100 0101 0000 0100 0000 (shifted 4 left)
+idk. shrug.
+solution: shift bottom string 2 bits to the right
+0000 0000 0011 0101 1001 0001 0100 0001
+  01 0010 1001 0101 1001 0001 0100 0001 00
+All of the bits in the int are in the float, except for the very top bit
+The float has a few more bits on the top that the int doesn't have

@@ -45,6 +45,8 @@ For a machine with x-bit word size, the virtual addresses can range from 0 to 2^
 Slightly older computers had 32-bit word size, which limits virtual address space to ~4 GB. That's why most machines have been shifting to 64-bit architecture.
 64-bit word size can have virtual address space of 16 exabytes, ~1.84 x 10^19 bytes.
 
+`getconf WORD_BIT`: CLI output word bit size
+
 As a form of backwards compatibility, most 64-bit machines can run programs compiled for use on 32-bit machines.
 GCC can compile directly for 32-bit:
 `gcc -m32 prog.c`
