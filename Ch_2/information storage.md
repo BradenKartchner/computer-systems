@@ -104,6 +104,34 @@ Code written for networking applications needs to adhere to a standard so that t
 **Warning:**
 When casting data as a different type than it was originally defined as, the byte order matters. Cross-platform applications shouldn't use casting tricks. Platform specific applications like OS's can use casting, but still need to be careful.
 
+## Compatibility of binary files
 
+Binary files are almost never compatible between devices
+Only the exact same processor running the exact same OS will be compatible
+Even the same processor across different OS will have different binary files
 
+# Intro to Boolean algebra
 
+~ = NOT
+~
+----
+0   1
+1   0
+
+& = AND
+&    0  1
+---------
+0    0  0
+1    0  1
+
+| = OR
+|    0  1
+---------
+0    0  1
+1    1  1
+
+^ = EXCLUSIVE-OR (ONLY 1 is true, not both)
+^    0  1
+---------
+0    0  1
+1    1  0
