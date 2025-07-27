@@ -112,6 +112,7 @@ Even the same processor across different OS will have different binary files
 
 # Intro to Boolean algebra
 
+** note: using the C bit-level operators for logic
 ~ = NOT
 ~
 ----
@@ -135,3 +136,9 @@ Even the same processor across different OS will have different binary files
 ---------
 0    0  1
 1    1  0
+
+Example of bit-level comparisons:
+  0110
+& 1100
+-------
+  0100

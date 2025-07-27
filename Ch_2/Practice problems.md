@@ -98,3 +98,38 @@ Strings in C are just arrays of characters
 And arrays are stored in order in memory from least to greatest
 So the answer is the same on little and big endian machines:
 `61 62 63 64 65 66`
+
+### Practice Problem 2.8
+a == [01101001]
+b == [01010101]
+
+~a == 10010110
+~b == 10101010
+
+a & b == 01000001
+a | b == 01111101
+a ^ b == 00111100
+
+### Practice Problem 2.9
+
+R G B
+-----
+0 0 1 Blue
+0 1 0 Green
+1 0 0 Red
+0 1 1 Cyan
+1 1 0 Yellow
+1 0 1 Magenta
+1 1 1 White
+0 0 0 Black
+
+Blue | Green == 0 1 1 == Cyan
+Yellow & Cyan == 1 1 1 == White
+Red ^ Magenta == 0 0 1 == Blue
+
+### Random practice bit-level operations in C (pg 54)
+
+~0x41 => ~[01000001] => [10111110] => 0xBE
+~0x00 => ~[00000000] => [11111111] => 0xff
+0x69 & 0x55 => [0110 1001] & [0101 0101] => [0100 0001] => 0x41
+0x69 | 0x55 => [0110 1001] | [0101 0101] => [0111 1101] => 0x7d
