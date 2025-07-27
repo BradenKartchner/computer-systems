@@ -78,3 +78,11 @@ solution: shift bottom string 2 bits to the right
   01 0010 1001 0101 1001 0001 0100 0001 00
 All of the bits in the int are in the float, except for the very top bit
 The float has a few more bits on the top that the int doesn't have
+
+### Practice Problem 2.7
+```
+const chat *s = "abcdef"
+show_bytes((bytepointer) s, strlen(s))
+```
+note: letters a-z have ASCII codes 0x61 through 0x7a
+This i3-2100 is Little endian
