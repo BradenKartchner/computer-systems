@@ -85,4 +85,16 @@ const chat *s = "abcdef"
 show_bytes((bytepointer) s, strlen(s))
 ```
 note: letters a-z have ASCII codes 0x61 through 0x7a
+My answer:
 This i3-2100 is Little endian
+a= 0x61, b = 0x62, c = 0x63, d = 0x64, e = 0x65, f = 0x66
+So bytes of the string in little endian:
+`66 65 64 63 62 61`
+Why my answer is wrong:
+Endianness only applies to data types with multiple bytes of information
+contained in one datum, like int, etc
+Characters in C are always 1 byte (unsigned or not)
+Strings in C are just arrays of characters
+And arrays are stored in order in memory from least to greatest
+So the answer is the same on little and big endian machines:
+`61 62 63 64 65 66`
