@@ -138,3 +138,17 @@ Red ^ Magenta == 0 0 1 == Blue
 
 Remember that a ^ a == 0 for any bit vector a
 
+void inplace_swap(int *x, int *y) {
+    *y = *x ^ *y; // step 1
+    *x = *x ^ *y; // step 2
+    *y = *x ^ *y; // step 3
+}
+
+Step        *x    *y
+-----------------------
+initially    a      b
+step 1       a      a^b
+step 2      a^a^b   a^b
+step 3      a^a^b   a^a^b^a^b
+a^a^b == b
+a^a^b^a^b == a^a^b^b^a == a
